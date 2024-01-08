@@ -1,0 +1,12 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: bookworm-config-server
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config
