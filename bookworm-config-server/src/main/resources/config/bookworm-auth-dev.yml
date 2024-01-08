@@ -1,2 +1,6 @@
-test:
-  message: "Hello from test"
+eureka:
+  client:
+    service-url:
+      defaultZone: http://bookworm-discovery-server:8761/eureka/
+    fetch-registry: true
+    register-with-eureka: true
