@@ -4,3 +4,29 @@ eureka:
       defaultZone: http://bookworm-discovery-server:8761/eureka/
     fetch-registry: true
     register-with-eureka: true
+
+spring:
+  datasource:
+    url: jdbc:mysql://bookworm-database:3306/bookworm?useSSL=false&allowPublicKeyRetrieval=true
+    username: worm
+    password: worm1234!@#$
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 10
+      connection-timeout: 30000
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+jwt:
+  secret: Z29uZy1jaGVjay1nb25nLWNoZWNrLWdvbmctY2hlY2stZ29uZy1jaGVjay1nb25nLWNoZWNrLWdvbmctY2hlY2stZ29uZy1jaGVjay1nb25nLWNoZWNrCg==
+  token:
+    access:
+      expiration: 86400000
+    refresh:
+        expiration: 2592000000
