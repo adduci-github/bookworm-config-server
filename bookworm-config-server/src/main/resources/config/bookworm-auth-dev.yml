@@ -30,3 +30,15 @@ jwt:
       expiration: 86400000
     refresh:
         expiration: 2592000000
+
+registration-strategy:
+  user-id:
+    min-length: 4
+    max-length: 10
+    regex: ^[a-z][a-z0-9_]*$
+  password:
+    min-length: 8
+    max-length: 20
+  nickname:
+    min-length: 2
+    max-length: 10
