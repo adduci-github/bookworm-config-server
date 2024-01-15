@@ -42,3 +42,11 @@ registration-strategy:
   nickname:
     min-length: 2
     max-length: 10
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: http://bookworm-zipkin-server:9411/api/v2/spans
